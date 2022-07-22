@@ -37,7 +37,7 @@ class Post(models.Model):
     views = models.IntegerField(default=0, verbose_name='Количество просмотров')
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, related_name='posts',
                                  blank=True, null=True, verbose_name='Категория поста')
-    tags = models.ManyToManyField(Tag, on_delete=models.SET_NULL, blank=True, null=True, related_name='Теги поста')
+    tags = models.ManyToManyField(Tag, blank=True, related_name='posts')
 
     def __str__(self):
         return self.title
