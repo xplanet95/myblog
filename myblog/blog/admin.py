@@ -51,6 +51,7 @@ class PostAdmin(admin.ModelAdmin):
 
     get_photo.short_description = 'Миниатюра'
 
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Tag, TagAdmin)
 admin.site.register(Post, PostAdmin)
