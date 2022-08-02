@@ -6,11 +6,11 @@ class Category(models.Model):
     title = models.CharField(max_length=255, verbose_name='Название категории')
     slug = models.SlugField(max_length=50, verbose_name='Url категории', unique=True)
 
-    def __str__(self):
-        return self.title
-
     def get_absolute_url(self):
         return reverse('get_category', kwargs={'slug': self.slug})
+
+    def __str__(self):
+        return self.title
 
     class Meta:
         verbose_name = 'Категория(ю)'

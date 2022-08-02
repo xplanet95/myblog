@@ -7,5 +7,5 @@ def index(request):
     return response
 
 
-def get_category(request):
-    return render(request, 'blog/index.html')
+def get_category(request, slug):
+    return render(request, 'blog/category.html')
